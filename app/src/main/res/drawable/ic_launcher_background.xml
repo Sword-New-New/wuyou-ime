@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 应用图标背景：蓝色对角渐变，与前景白色 W 形成足够对比 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="315"
+        android:startColor="#488DE9"
+        android:endColor="#184080"
+        android:type="linear" />
+</shape>

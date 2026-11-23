@@ -211,7 +211,7 @@ class WelcomeActivity : AppCompatActivity() {
     // 第 1 页：大欢迎
     private fun buildWelcome(col: LinearLayout) {
         col.addView(ImageView(this).apply {
-            setImageResource(R.mipmap.ic_launcher_foreground)
+            setImageResource(R.mipmap.ic_launcher)
             layoutParams = LinearLayout.LayoutParams(dp(120), dp(120))
         })
         val sp = Space(this, dp(18))
