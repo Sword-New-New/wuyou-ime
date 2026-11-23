@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 输入法服务声明：系统据此在「设置-语言和输入法」中列出本输入法 -->
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.wuyouai.ime.settings.SettingsActivity"
+    android:isDefault="false">
+    <subtype
+        android:id="@+id/subtype_pinyin_qwerty"
+        android:label="@string/subtype_pinyin"
+        android:imeSubtypeLocale="zh_CN"
+        android:imeSubtypeMode="keyboard"
+        android:isAsciiCapable="true"
+        android:icon="@mipmap/ic_launcher_foreground" />
+</input-method>

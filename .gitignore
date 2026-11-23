@@ -1,0 +1,61 @@
+# 构建产物 / Build artifacts
+build/
+*/build/
+.gradle/
+*.apk
+*.aab
+*.aar
+*.ap_
+*.dex
+*.class
+*.jar
+!/gradle/wrapper/gradle-wrapper.jar
+output-metadata.json
+*.hprof
+
+# IDE
+.idea/
+*.iml
+.vscode/
+captures/
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 本地环境（不入库）
+local.properties
+gradle.properties.local
+gradle.properties.private
+
+# 签名密钥（绝不提交）
+*.keystore
+*.jks
+*.p12
+keystore.properties
+signing.properties
+
+# 日志 / 临时
+*.log
+.cxx/
+.externalNativeBuild/
+.cache/
+tmp/
+
+# ---- 本地开发残留（不属于开源仓库）----
+cmdtools.zip
+junda_modern.txt
+jieba_dict.txt
+jd.txt
+moe.txt
+c1.txt
+c2.txt
+c3.txt
+freq1.txt
+验证报告.md
+发布/
+tools/*.txt
+
+# 开发过程笔记（不入库）
+本轮修复说明.md
+开发笔记.md

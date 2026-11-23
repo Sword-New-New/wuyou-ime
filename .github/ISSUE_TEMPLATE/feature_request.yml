@@ -1,0 +1,33 @@
+name: 功能建议
+description: 提出新功能或改进想法
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        建议前请先阅读 CONTRIBUTING.md 的「核心约束」。
+        任何需要联网、统计 SDK 或后台常驻的功能都不会被接受。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你想解决什么问题
+      description: 描述使用场景与痛点，而不是先说方案
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 你设想怎么做
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: offline
+    attributes:
+      label: 离线可行性
+      options:
+        - label: 该功能可完全离线实现（不依赖云端模型、下载或联网校验）
+          required: true

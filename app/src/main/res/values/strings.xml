@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">无忧输入法</string>
+    <string name="ime_name">无忧输入法 V2.0</string>
+    <string name="subtype_pinyin">拼音</string>
+    <string name="settings_title">无忧输入法设置</string>
+    <string name="dict_title">词库管理</string>
+    <string name="theme_title">外观主题</string>
+    <string name="privacy_title">隐私与安全</string>
+
+    <!-- 设置分组 -->
+    <string name="group_input">输入设置</string>
+    <string name="group_chinese">中文输入</string>
+    <string name="group_english">英文输入</string>
+    <string name="group_smart">智能输入</string>
+    <string name="group_dict">词库管理</string>
+    <string name="group_privacy">隐私与安全</string>
+    <string name="group_theme">外观主题</string>
+    <string name="group_about">关于</string>
+
+    <!-- 输入设置 -->
+    <string name="input_layout">键盘布局</string>
+    <string name="input_height">键盘高度</string>
+    <string name="input_sound">按键声音</string>
+    <string name="input_vibrate">振动反馈</string>
+    <string name="input_longpress">长按时间</string>
+
+    <!-- 中文 -->
+    <string name="cn_full">全拼输入</string>
+    <string name="cn_simplified">简拼输入</string>
+    <string name="cn_fuzzy">模糊音</string>
+    <string name="cn_correct">智能纠错</string>
+    <string name="cn_cand_count">候选词数量</string>
+    <string name="cn_associate">词语联想</string>
+    <string name="cn_long">长句预测</string>
+
+    <!-- 英文 -->
+    <string name="en_autocap">自动大写</string>
+    <string name="en_autospace">自动空格</string>
+    <string name="en_correct">英文纠错</string>
+    <string name="en_predict">英文预测</string>
+
+    <!-- 智能 -->
+    <string name="smart_context">上下文预测</string>
+    <string name="smart_personalize">个性化学习</string>
+    <string name="smart_phrase">智能短语</string>
+    <string name="smart_synonym">同义词推荐</string>
+
+    <!-- 隐私 -->
+    <string name="privacy_mode">隐私模式</string>
+    <string name="privacy_pause">暂停学习</string>
+    <string name="privacy_clear">清除学习数据</string>
+    <string name="privacy_clipboard">剪贴板历史</string>
+    <string name="privacy_data">本地数据管理</string>
+    <string name="privacy_desc">隐私保护说明</string>
+
+    <!-- 关于 -->
+    <string name="about_version">版本信息</string>
+    <string name="about_features">功能介绍</string>
+    <string name="about_policy">隐私政策</string>
+    <string name="about_dev">开发者信息</string>
+</resources>

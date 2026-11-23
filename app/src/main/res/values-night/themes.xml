@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Wuyou" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/wuyou_accent</item>
+        <item name="android:statusBarColor">#1A1A1A</item>
+        <item name="android:navigationBarColor">#1A1A1A</item>
+    </style>
+</resources>

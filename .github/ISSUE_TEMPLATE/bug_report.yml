@@ -1,0 +1,66 @@
+name: 问题反馈
+description: 报告一个可复现的 Bug
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请尽量把信息填全 —— 「输入美国只出了没」这类描述一步就能定位问题。
+
+  - type: input
+    id: version
+    attributes:
+      label: 无忧输入法版本
+      description: 设置页底部可见，或 APK 文件名中的版本号
+      placeholder: "2.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 机型 / ROM / Android 版本
+      placeholder: "Xiaomi 14 / HyperOS 2.0 / Android 15"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开短信输入框
+        2. 输入拼音 meiguo
+        3. 候选栏只出现单个「没」
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: (可选) logcat
+      description: 若涉及崩溃，请附 logcat 中 com.wuyou.ime 相关日志
+      render: shell
+
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已在飞行模式下复现，确认这不是网络相关行为
+        - label: 我已搜索现有 Issue，未找到相同问题
