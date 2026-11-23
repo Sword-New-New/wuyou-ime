@@ -1,63 +1,156 @@
 package com.wuyouai.ime.themes
 
-import android.graphics.Color
-
 /**
- * 主题系统：内置 6 套完整主题 + 自定义参数。
+ * 主题系统：内置 6 套克制、清晰的纯色质感主题。
  * 颜色即时生效，切换无重启。
  */
 data class KeyboardTheme(
     val id: String,
     val name: String,
-    val bg: Int,            // 键盘背景
-    val keyBg: Int,         // 普通按键背景
-    val keyText: Int,       // 按键文字
-    val specialKeyBg: Int,  // 功能键背景
-    val accent: Int,        // 强调色（低饱和蓝）
-    val candidateText: Int, // 候选文字
-    val candidateActive: Int, // 高亮候选
-    val candidateBarBg: Int,  // 候选栏背景
+    val bg: Int,               // 键盘背景底板
+    val keyBg: Int,            // 普通按键背景
+    val keyText: Int,          // 按键文字
+    val specialKeyBg: Int,     // 功能键背景
+    val accent: Int,           // 强调色（回车键/首选词）
+    val candidateText: Int,    // 候选文字
+    val candidateActive: Int,  // 高亮候选
+    val candidateBarBg: Int,   // 候选栏背景
     val isDark: Boolean,
 
-    /** 是否为「液态玻璃」风格：键帽半透明 + 高光 + 内部折射 */
-    val liquidGlass: Boolean = false,
-    /** 玻璃背景墙：底部渐变的两端颜色（决定透过玻璃看到的画面） */
-    val glassWallTop: Int = 0,
-    val glassWallBottom: Int = 0
+    /** 扩展色值（带默认值以保持向后兼容） */
+    val keyShadow: Int = 0xFFBFC6D2.toInt(),
+    val specialShadow: Int = 0xFFAEB6C5.toInt(),
+    val hairline: Int = 0xFFD4DAE3.toInt(),
+    val accentText: Int = 0xFFFFFFFF.toInt(),
+    val pressedBg: Int = 0xFFDCE4F5.toInt(),
+    val popupBg: Int = 0xFFFFFFFF.toInt()
 )
 
 object ThemeManager {
 
     val themes: List<KeyboardTheme> = listOf(
-        KeyboardTheme("pure_white", "纯白极简",
-            Color.WHITE, Color.WHITE, 0xFF1A1A1A.toInt(), 0xFFF0F0F2.toInt(),
-            0xFF4A6FA5.toInt(), 0xFF1A1A1A.toInt(), 0xFF4A6FA5.toInt(), 0xFFFAFAFA.toInt(), false),
-        KeyboardTheme("deep_black", "深空黑",
-            0xFF121212.toInt(), 0xFF2A2A2C.toInt(), 0xFFF5F5F5.toInt(), 0xFF232325.toInt(),
-            0xFF7A9BC4.toInt(), 0xFFE8E8E8.toInt(), 0xFF7A9BC4.toInt(), 0xFF1A1A1A.toInt(), true),
-        KeyboardTheme("minimal_gray", "极简灰",
-            0xFFEFEFF1.toInt(), 0xFFFFFFFF.toInt(), 0xFF222222.toInt(), 0xFFE2E2E5.toInt(),
-            0xFF5B7DA8.toInt(), 0xFF222222.toInt(), 0xFF5B7DA8.toInt(), 0xFFE8E8EA.toInt(), false),
-        KeyboardTheme("fresh_blue", "清新蓝",
-            0xFFEAF1FA.toInt(), 0xFFFFFFFF.toInt(), 0xFF1B3A5C.toInt(), 0xFFD6E4F5.toInt(),
-            0xFF3D6EA8.toInt(), 0xFF1B3A5C.toInt(), 0xFF3D6EA8.toInt(), 0xFFDDE9F7.toInt(), false),
-        KeyboardTheme("cream_soft", "米白柔和",
-            0xFFF7F3EC.toInt(), 0xFFFFFCF7.toInt(), 0xFF4A4238.toInt(), 0xFFEDE6DA.toInt(),
-            0xFF9C7B5E.toInt(), 0xFF4A4238.toInt(), 0xFF9C7B5E.toInt(), 0xFFF1EBE1.toInt(), false),
-        KeyboardTheme("dark_eye_care", "深色护眼",
-            0xFF1E1F1B.toInt(), 0xFF33342E.toInt(), 0xFFD8D5C4.toInt(), 0xFF2A2B26.toInt(),
-            0xFFA8B58A.toInt(), 0xFFD0CDBB.toInt(), 0xFFA8B58A.toInt(), 0xFF25261F.toInt(), true)
-
-        // ---- 液态玻璃主题暂时下架 ----
-        // 说明：绘制实现（KeyboardView.drawLiquidGlass）仍完整保留，
-        // 只是不再出现在主题列表里，避免用户选到后出现异常。
-        // 需要恢复时，把下面两条 KeyboardTheme 追加回列表即可。
-        //
-        // KeyboardTheme(id = "liquid_glass_light", name = "液态玻璃 · 浅", ...)
-        // KeyboardTheme(id = "liquid_glass_dark",  name = "液态玻璃 · 深", ...)
+        KeyboardTheme(
+            id = "pure_white",
+            name = "素瓷白",
+            bg = 0xFFE6E9EF.toInt(),
+            keyBg = 0xFFFFFFFF.toInt(),
+            keyText = 0xFF1A1E26.toInt(),
+            specialKeyBg = 0xFFD5DBE5.toInt(),
+            accent = 0xFF2F5FD0.toInt(),
+            candidateText = 0xFF1A1E26.toInt(),
+            candidateActive = 0xFF2F5FD0.toInt(),
+            candidateBarBg = 0xFFECEFF4.toInt(),
+            isDark = false,
+            keyShadow = 0xFFBFC6D2.toInt(),
+            specialShadow = 0xFFAEB6C5.toInt(),
+            hairline = 0xFFD4DAE3.toInt(),
+            accentText = 0xFFFFFFFF.toInt(),
+            pressedBg = 0xFFDCE4F5.toInt(),
+            popupBg = 0xFFFFFFFF.toInt()
+        ),
+        KeyboardTheme(
+            id = "deep_black",
+            name = "墨玉黑",
+            bg = 0xFF14161B.toInt(),
+            keyBg = 0xFF2A2D35.toInt(),
+            keyText = 0xFFF2F4F8.toInt(),
+            specialKeyBg = 0xFF1F2229.toInt(),
+            accent = 0xFF4F82F0.toInt(),
+            candidateText = 0xFFEAECEF.toInt(),
+            candidateActive = 0xFF4F82F0.toInt(),
+            candidateBarBg = 0xFF191C22.toInt(),
+            isDark = true,
+            keyShadow = 0xFF0C0D11.toInt(),
+            specialShadow = 0xFF0C0D11.toInt(),
+            hairline = 0xFF262A33.toInt(),
+            accentText = 0xFFFFFFFF.toInt(),
+            pressedBg = 0xFF3D4454.toInt(),
+            popupBg = 0xFF3A3F4B.toInt()
+        ),
+        KeyboardTheme(
+            id = "minimal_gray",
+            name = "雾银灰",
+            bg = 0xFFDFE3E8.toInt(),
+            keyBg = 0xFFFFFFFF.toInt(),
+            keyText = 0xFF1E232C.toInt(),
+            specialKeyBg = 0xFFCFD5DF.toInt(),
+            accent = 0xFF3E67B8.toInt(),
+            candidateText = 0xFF1E232C.toInt(),
+            candidateActive = 0xFF3E67B8.toInt(),
+            candidateBarBg = 0xFFE6E9EE.toInt(),
+            isDark = false,
+            keyShadow = 0xFFB8C0CC.toInt(),
+            specialShadow = 0xFFA6AFBE.toInt(),
+            hairline = 0xFFCCD2DC.toInt(),
+            accentText = 0xFFFFFFFF.toInt(),
+            pressedBg = 0xFFD8E1F0.toInt(),
+            popupBg = 0xFFFFFFFF.toInt()
+        ),
+        KeyboardTheme(
+            id = "fresh_blue",
+            name = "晴空蓝",
+            bg = 0xFFDCE7F5.toInt(),
+            keyBg = 0xFFFFFFFF.toInt(),
+            keyText = 0xFF173252.toInt(),
+            specialKeyBg = 0xFFC8DAEE.toInt(),
+            accent = 0xFF2B6CB0.toInt(),
+            candidateText = 0xFF173252.toInt(),
+            candidateActive = 0xFF2B6CB0.toInt(),
+            candidateBarBg = 0xFFE4EEF9.toInt(),
+            isDark = false,
+            keyShadow = 0xFFAFC5DF.toInt(),
+            specialShadow = 0xFF9EB7D4.toInt(),
+            hairline = 0xFFC6D7EC.toInt(),
+            accentText = 0xFFFFFFFF.toInt(),
+            pressedBg = 0xFFD3E5FA.toInt(),
+            popupBg = 0xFFFFFFFF.toInt()
+        ),
+        KeyboardTheme(
+            id = "cream_soft",
+            name = "宣纸暖白",
+            bg = 0xFFEAE2D6.toInt(),
+            keyBg = 0xFFFDFBF7.toInt(),
+            keyText = 0xFF372F27.toInt(),
+            specialKeyBg = 0xFFDDD3C3.toInt(),
+            accent = 0xFF9A6B46.toInt(),
+            candidateText = 0xFF372F27.toInt(),
+            candidateActive = 0xFF9A6B46.toInt(),
+            candidateBarBg = 0xFFF0E9DE.toInt(),
+            isDark = false,
+            keyShadow = 0xFFC8BCAE.toInt(),
+            specialShadow = 0xFFBBAEA0.toInt(),
+            hairline = 0xFFD9CFC0.toInt(),
+            accentText = 0xFFFFFFFF.toInt(),
+            pressedBg = 0xFFEFE3D5.toInt(),
+            popupBg = 0xFFFDFBF7.toInt()
+        ),
+        KeyboardTheme(
+            id = "dark_eye_care",
+            name = "深松护眼",
+            bg = 0xFF1B1E1A.toInt(),
+            keyBg = 0xFF2E332C.toInt(),
+            keyText = 0xFFDCDAC9.toInt(),
+            specialKeyBg = 0xFF242822.toInt(),
+            accent = 0xFF7D9B6A.toInt(),
+            candidateText = 0xFFDCDAC9.toInt(),
+            candidateActive = 0xFF7D9B6A.toInt(),
+            candidateBarBg = 0xFF20241F.toInt(),
+            isDark = true,
+            keyShadow = 0xFF111410.toInt(),
+            specialShadow = 0xFF111410.toInt(),
+            hairline = 0xFF2D332B.toInt(),
+            accentText = 0xFF121610.toInt(),
+            pressedBg = 0xFF3D4539.toInt(),
+            popupBg = 0xFF3C4339.toInt()
+        )
     )
 
     fun byId(id: String): KeyboardTheme = themes.firstOrNull { it.id == id } ?: themes[0]
+
+    fun nextAfter(currentId: String): KeyboardTheme {
+        val idx = themes.indexOfFirst { it.id == currentId }
+        return if (idx < 0) themes[0] else themes[(idx + 1) % themes.size]
+    }
 
     /** 主题切换即时生效，无需重启服务 */
     fun applyTheme(id: String): KeyboardTheme = byId(id)
