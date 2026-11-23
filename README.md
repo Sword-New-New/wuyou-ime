@@ -44,15 +44,13 @@
 
 ## 截图
 
-| 能力介绍 | 键盘 |
-|----------|------|
-| ![能力介绍](docs/screenshots/guide-features.png) | ![键盘](docs/screenshots/keyboard.png) |
+| 欢迎页 | 能力介绍 |
+|--------|----------|
+| ![欢迎页](docs/screenshots/welcome.png) | ![能力介绍](docs/screenshots/guide-features.png) |
 
-| 设置 |
-|------|
-| ![设置](docs/screenshots/settings.png) |
-
-> 欢迎页截图中包含旧版图标，待用新版图标重新截图后补充。
+| 键盘 | 设置 |
+|------|------|
+| ![键盘](docs/screenshots/keyboard.png) | ![设置](docs/screenshots/settings.png) |
 
 ## 隐私设计
 
